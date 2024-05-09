@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the script files to the working directory
-COPY ipfs_sync/ ./ipfs_sync/
+COPY ./ipfs_sync ./ipfs_sync
 
 # Set the entry point command to run the script
 ENTRYPOINT ["python", "-m", "ipfs_sync.main"]
